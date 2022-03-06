@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "private" {
   bucket = "mutao-sample-bucket"
+  acl    = "private"
   versioning {
     enabled = false
   }
