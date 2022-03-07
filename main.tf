@@ -1,14 +1,14 @@
+terraform {
+  required_providers {
+    aws = "~> 3.74"
+  }
+}
+
 variable "aws_access_key" {
 
 }
 variable "aws_secret_key" {
 
-}
-
-terraform {
-  required_providers {
-    aws = "~> 3.74"
-  }
 }
 
 provider "aws" {
@@ -17,6 +17,12 @@ provider "aws" {
   region     = "ap-northeast-1"
 }
 
+/*
 module "s3_storage" {
   source = "./s3"
+}
+*/
+
+module "iam" {
+  source = "./iam"
 }
